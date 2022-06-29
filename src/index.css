@@ -1,4 +1,8 @@
 @import-normalize; /* bring in normalize.css styles */
+/* :root {
+  --green-color: #00ff00;
+  --red-color: #ff0000;
+} */
 
 body {
   margin: 0;
@@ -7,9 +11,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 20px;
+  grid-template-rows: 416px 360px 200px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
