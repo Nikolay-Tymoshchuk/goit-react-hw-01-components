@@ -3,12 +3,10 @@ import css from './FriendListItem.module.css';
 import { imgWidth } from 'constants';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
+  const status = isOnline ? 'online' : 'offline';
   return (
     <li className={css.item}>
-      <span
-        className={css.status}
-        style={{ backgroundColor: isOnline ? '#00b300' : '#ff0000' }}
-      >
+      <span className={css.currentStatus} status={status}>
         {isOnline}
       </span>
       <img
@@ -26,5 +24,4 @@ FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
 };
