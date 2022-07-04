@@ -6,9 +6,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
   const status = isOnline ? 'online' : 'offline';
   return (
     <li className={css.item}>
-      <span className={css.currentStatus} status={status}>
-        {isOnline}
-      </span>
+      <span className={css.currentStatus} status={status}></span>
       <img
         className={css.avatar}
         src={avatar}
